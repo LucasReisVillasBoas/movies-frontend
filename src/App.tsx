@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MovieSearch from "./components/MovieSearch";
+import GenreSearch from "./components/GenreSearch";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        backgroundColor: "#f0f0f0",
+        position: "absolute",
+        width: "100%",
+      }}
+    >
+      <h1 style={{ textAlign: "center" }}>Pesquisa de Filmes</h1>
+      <div
+        style={{
+          flexDirection: "row",
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
+        <MovieSearch />
+        <GenreSearch />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
